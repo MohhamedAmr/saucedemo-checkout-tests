@@ -2,7 +2,7 @@
 
 **Scope:** checkout flow with `standard_user` (products > cart > checkout information > overview > complete).
 
-**Environment (all bugs below):** Windows 10 64-bit, Chrome 154.0.8037.57, desktop 1920x953, home broadband (no throttling).
+**Test environment:** Windows 10, Chrome 154.0.8037.57, desktop 1920x953.
 
 ## 1. Test ideas
 
@@ -35,12 +35,7 @@ Priority is based on business impact: anything that blocks the purchase or affec
 **P3 - Medium**
 - Other browsers (Firefox, Safari, Edge) and mobile screen size
 - Keyboard navigation and accessibility
-- Slow network
 - UI alignment and product content
-
-P1 is what every customer goes through, so a failure there means lost sales or wrong amounts. P2 covers mistakes and side paths that can create bad orders. P3 matters before a release but is less likely to block a purchase.
-
-Not covered in this round: other browsers, mobile, keyboard and slow network.
 
 ## 2. Bugs
 
@@ -169,4 +164,7 @@ These need a product decision or are UX points; the flow still works.
 - **OBS-07** Inputs use placeholders instead of labels, and adding/removing items is not announced to screen readers.
 - **OBS-08** The cart is kept after logout (stored in the browser).
 - **OBS-09** Quantity can't be changed in the cart.
-- **OBS-10** Tax (8%) is calculated correctly but the rate isn't shown.
+
+Checked and not reported as bugs (demo content, shown the same everywhere):
+- The Backpack description starts with `carry.allTheThings()`.
+- The product name `Test.allTheThings() T-Shirt (Red)`. Only the image mismatch is noted in OBS-05.
